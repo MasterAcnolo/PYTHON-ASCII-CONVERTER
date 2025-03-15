@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertisseur Image → ASCII</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 20px;
+        }
+        pre {
+            white-space: pre-wrap;
+            font-size: 8px;
+            line-height: 6px;
+            display: inline-block;
+            text-align: left;
+            background: black;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 8px;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: cyan;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Convertisseur d'image en ASCII</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="number" name="width" value="100" min="20" max="300">
+        <select name="charset">
+            <option value="classic">Classique</option>
+            <option value="pixel">Pixel Art</option>
+            <option value="detailed">Ultra détaillé</option>
+        </select>
+        <label>
+            <input type="checkbox" name="color"> ASCII coloré
+        </label>
+        <button type="submit">Convertir</button>
+    </form>
+    
+    {% if ascii_art %}
+    <h2>Résultat :</h2>
+    <pre>{{ ascii_art | safe }}</pre>
+    <a href="/download?ascii_art={{ ascii_art | urlencode }}" download="ascii_art.txt">Télécharger en .txt</a>
+    {% endif %}
+</body>
+</html>
