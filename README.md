@@ -14,16 +14,9 @@ Ce projet est une application web qui permet de convertir des images en art ASCI
 1. Clonez le dépôt:
     ```sh
     git clone https://github.com/MasterAcnolo/PYTHON-ASCII-CONVERTER
-    cd votre-repo
     ```
 
-2. Créez un environnement virtuel et activez-le:
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # Sur Windows, utilisez `venv\Scripts\activate`
-    ```
-
-3. Installez les dépendances:
+2. Installez les dépendances:
     ```sh
     pip install flask pillow
     ```
@@ -34,11 +27,11 @@ Ce projet est une application web qui permet de convertir des images en art ASCI
 
 Pour convertir une image en ASCII via la ligne de commande, exécutez `converter.py`:
 ```sh
-python [converter.py](http://_vscodecontentref_/4)
+python converter.py
 
 ```
 
-Entrez le chemin de l'image lorsque demandé.
+Entrez le chemin de l'image lorsque demandé.(Chemin Absolu de préférence, sauf si éléments dans le dossier racine)
 
 ### Application Web
 Pour lancer l'application web, exécutez `site.py`:
