@@ -37,7 +37,7 @@ Entrez le chemin de l'image lorsque demandé.(Chemin Absolu de préférence, sau
 Pour lancer l'application web, exécutez `site.py`:
 
 ```python
-python [site.py](http://_vscodecontentref_/5)
+python site.py
 ```
 
 Ouvrez votre navigateur et allez à `http://127.0.0.1:5000` pour accéder à l'interface utilisateur.
